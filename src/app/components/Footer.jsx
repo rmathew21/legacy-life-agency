@@ -52,7 +52,18 @@ export function Footer() {
 
                 <div className="border-t border-gray-800 pt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-                        <p className=" hover:text-amber-400 transition-colors">&copy; 2026 Legacy Life Agency. <a target="_blank" href="https://www.robinmathew.dev/">Powered by Robo Web Solutions</a></p>
+                        <p>
+                            &copy; 2026 Legacy Life Agency. {" "}
+                            
+                            <a 
+                                href="https://www.robinmathew.dev/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-400 hover:text-amber-400 transition-colors"
+                            >
+                                Powered by Robo Web Solutions
+                            </a>
+                        </p>
                         <div className="flex space-x-6 mt-4 md:mt-0">
                             <a href="#" className="hover:text-amber-400 transition-colors">Privacy Policy</a>
                             <a href="#" className="hover:text-amber-400 transition-colors">Terms of Service</a>
