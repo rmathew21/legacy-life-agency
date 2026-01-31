@@ -1,4 +1,4 @@
-import { Facebook, X, LinkedIn, Instagram } from "lucide-react";
+import { Facebook, X, Linkedin, Instagram } from "lucide-react";
 
 export function Footer() {
     return (
@@ -41,7 +41,7 @@ export function Footer() {
                                 <X className="h-6 w-6" />
                             </a>
                             <a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">
-                                <LinkedIn className="h-6 w-6" />
+                                <Linkedin className="h-6 w-6" />
                             </a>
                             <a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">
                                 <Instagram className="h-6 w-6" />
