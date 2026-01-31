@@ -12,7 +12,7 @@ export function Hero() {
                     Legacy Life Agency
                 </h1>
                 <p className="text-xl sm:text-2xl text-amber-100 mb-8 max-w-3xl mx-auto">
-                    Building a bridge between the lief you're living and the legacy you'll leave behind
+                    Building a bridge between the life you're living and the legacy you'll leave behind
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Button size="lg" className="bg-amber-600 text-white hover:bg-amber-700 px-8 py-6 text-lg">
