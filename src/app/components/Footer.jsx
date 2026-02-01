@@ -34,16 +34,16 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold mb-4">Connect With Us</h4>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">
+                            <a href="https://www.facebook.com/" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors">
                                 <Facebook className="h-6 w-6" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">
+                            <a href="https://x.com/" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors">
                                 <X className="h-6 w-6" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">
+                            <a href="https://www.linkedin.com/" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors">
                                 <Linkedin className="h-6 w-6" />
                             </a>
-                            <a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">
+                            <a href="https://www.instagram.com/" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors">
                                 <Instagram className="h-6 w-6" />
                             </a>
                         </div>
