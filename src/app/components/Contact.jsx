@@ -72,8 +72,16 @@ export function Contact() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
-                                        <p className="text-gray-600">(972) 522-8687</p>
-                                        <p className="text-sm text-gray-500 mt-1">Mon-Fri 9AM - 5PM CST</p>
+                                        <a 
+                                            href="tel:+19725228687"
+                                            className="text-gray-600 hover:text-amber-600 font-medium transition whitespace-nowrap"
+                                            aria-label="Call Legacy Life Agency at 972 522 8687"
+                                        >
+                                            (972) 522-8687
+                                        </a>
+                                        <p className="text-sm text-gray-500 mt-1">
+                                            Mon - Fri 9AM - 5PM CST
+                                        </p>
                                     </div>
                                 </div>
                             </CardContent>
@@ -87,8 +95,17 @@ export function Contact() {
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                                        <p className="text-gray-600">roshanskariah@legacylifeagency.net</p>
-                                        <p className="text-sm text-gray-500 mt-1">We'll respond within 24 hours</p>
+
+                                        <a 
+                                            href="mailto:roshanskariah@legacylifeagency.net"
+                                            className="text-gray-600 hover:text-amber-600 font-medium transition break-all"
+                                            aria-label="Email Legacy Life Agency"
+                                        >
+                                            roshanskariah@legacylifeagency.net
+                                        </a>
+                                        <p className="text-sm text-gray-500 mt-1">
+                                            We'll respond within 24 hours
+                                        </p>
                                     </div>
                                 </div>
                             </CardContent>
