@@ -63,8 +63,34 @@ export function Contact() {
                             </CardContent>
                         </Card>
                     </div>
+
                     <div className="space-y-6">
-                        <Card>
+                        <Card className="rounded-xl overflow-hidden transition hover:shadow-md hover:-translate-y-0.5">
+                            <a 
+                                href="tel:+19725228687"
+                                aria-label="Call Legacy Life Agency at 972 522 8687"
+                                className="block focus:outline-none focus:ring-2 focus:ring-amber-400"
+                            >
+                            <CardContent className="pt-6 transition cursor-pointer hover:bg-amber-50">
+                                <div className="flex items-start space-x-4">
+                                    <div className="bg-amber-100 p-3 rounded-lg">
+                                        <Mail className="h-6 w-6 text-amber-700" />
+                                    </div>
+
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
+                                        <p className="text-gray-600 break-all">
+                                            (972) 522-8687
+                                        </p>
+                                        <p className="text-sm text-gray-500 mt-1">
+                                            Mon - Fri 9AM - 5PM CST
+                                        </p>
+                                    </div>
+                                </div>
+                            </CardContent>
+                            </a>
+                        </Card>
+                        {/* <Card>
                             <CardContent className="pt-6">
                                 <div className="flex items-start space-x-4">
                                     <div className="bg-amber-100 p-3 rounded-lg">
@@ -85,30 +111,32 @@ export function Contact() {
                                     </div>
                                 </div>
                             </CardContent>
-                        </Card>
-
-                        <Card>
-                            <CardContent className="pt-6">
+                        </Card> */}
+                
+                        <Card className="rounded-xl overflow-hidden transition hover:shadow-md hover:-translate-y-0.5">
+                            <a 
+                                href="mailto:roshanskariah@legacylifeagency.net"
+                                aria-label="Email Legacy Lie Agency"
+                                className="block focus:outline-none focus:ring-2 focus:ring-amber-400"
+                            >
+                            <CardContent className="pt-6 transition cursor-pointer hover:bg-amber-50">
                                 <div className="flex items-start space-x-4">
                                     <div className="bg-amber-100 p-3 rounded-lg">
                                         <Mail className="h-6 w-6 text-amber-700" />
                                     </div>
+
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-
-                                        <a 
-                                            href="mailto:roshanskariah@legacylifeagency.net"
-                                            className="text-gray-600 hover:text-amber-600 font-medium transition break-all"
-                                            aria-label="Email Legacy Life Agency"
-                                        >
+                                        <p className="text-gray-600 break-all">
                                             roshanskariah@legacylifeagency.net
-                                        </a>
+                                        </p>
                                         <p className="text-sm text-gray-500 mt-1">
                                             We'll respond within 24 hours
                                         </p>
                                     </div>
                                 </div>
                             </CardContent>
+                            </a>
                         </Card>
 
                         {/* <Card>
