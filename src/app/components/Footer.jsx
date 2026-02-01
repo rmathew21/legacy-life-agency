@@ -15,9 +15,9 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold mb-4">Services</h4>
                         <ul className="space-y-2 text-sm">
-                            <li><a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">Life Insurance</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">Financial Planning</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">Retirement Planning</a></li>
+                            <li><a href="#services" className="text-gray-400 hover:text-amber-400 transition-colors">Life Insurance</a></li>
+                            <li><a href="#services" className="text-gray-400 hover:text-amber-400 transition-colors">Financial Planning</a></li>
+                            <li><a href="#services" className="text-gray-400 hover:text-amber-400 transition-colors">Retirement Planning</a></li>
                         </ul>
                     </div>
 

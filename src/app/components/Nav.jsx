@@ -23,14 +23,16 @@ export function Nav() {
                         <h1 className="text-2xl font-bold text-slate-900">Legacy Life Agency</h1>
                     </div> */}
                     <div className="flex items-center gap-3">
-                        <img 
-                            src={logo}
-                            alt="Legacy Life Agency logo" 
-                            className="h-8 w-auto"
-                        />
-                        <span className="text-2xl font-bold tracking-wide text-slate-900">
-                            Legacy Life Agency
-                        </span>
+                        <a href="" className="flex items-center gap-3">
+                            <img 
+                                src={logo}
+                                alt="Legacy Life Agency logo" 
+                                className="h-8 w-auto"
+                            />
+                            <span className="text-2xl font-bold tracking-wide text-slate-900">
+                                Legacy Life Agency
+                            </span>
+                        </a>
                     </div>
 
                     {/* Desktop Navigation */}
@@ -44,9 +46,12 @@ export function Nav() {
                                 {item.name}
                             </a>
                         ))}
-                        <Button className="bg-amber-600 hover:bg-amber-700">
-                            Get Started
-                        </Button>
+                        <a href="#contact">
+                            <Button className="bg-amber-600 hover:bg-amber-700">
+                                Get Started
+                            </Button>
+                        </a>
+                        
                     </nav>
 
                     {/* Mobile Menu Button */}
