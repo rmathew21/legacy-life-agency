@@ -10,14 +10,14 @@ export default function App() {
   return (
     <div className="min-h-screen">
       <Nav />
-      {/* <main> */}
+      <main>
       <Hero />
       <About />
       <Services />
       <FAQ />
       <Contact />
-      {/* </main> */}
+      </main>
       <Footer />
     </div>
-  )
+  );
 }

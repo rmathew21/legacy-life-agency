@@ -1,4 +1,7 @@
 @import "tailwindcss";
+/* @import './fonts.css';
+@import './tailwind.css';
+@import './theme.css'; */
 
 @theme {
   --font-sans: 'Roboto', system-ui, sans-serif;
