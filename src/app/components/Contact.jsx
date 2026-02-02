@@ -24,39 +24,52 @@ export function Contact() {
                                 <CardTitle>Send us a Message</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <form className="space-y-4">
-                                    <div className="grid-grid-cols-2 gap-4">
+                                <form 
+                                    action="https://formspree.io/f/xkozzvrp"
+                                    method="POST"
+                                    className="space-y-4"
+                                    >
+                                    <div className="grid grid-cols-2 gap-4">
                                         <div>
                                             <label className="block text-sm mb-2 text-gray-700">First Name</label>
-                                            <Input placeholder="John" />
+                                            <Input name="firstName" placeholder="John" required />
                                         </div>
                                         <div>
                                             <label className="block text-sm mb-2 text-gray-700">Last Name</label>
-                                            <Input placeholder="Smith" />
+                                            <Input name="lastName" placeholder="Smith" required />
                                         </div>
                                     </div>
+
                                     <div>
                                         <label className="block text-sm mb-2 text-gray-700">Email</label>
-                                        <Input type="email" placeholder="john.smith@example.com" />
+                                        <Input name="email" type="email" placeholder="john.smith@example.com" required />
                                     </div>
+
                                     <div>
                                         <label className="block text-sm mb-2 text-gray-700">Phone</label>
-                                        <Input type="tel" placeholder="(555) 555-5555" />
+                                        <Input name="phone" type="tel" placeholder="(555) 555-5555" />
                                     </div>
+
                                     <div>
                                         <label className="block text-sm mb-2 text-gray-700">I'm interested in:</label>
-                                        <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-600">
-                                            <option value="">Life Insurance</option>
-                                            <option value="">Financial Planning</option>
-                                            <option value="">Retirement Planning</option>
-                                            <option value="">All Services</option>
+                                        <select 
+                                            name="interest"
+                                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-600"
+                                            defaultValue="Life Insurance"
+                                            >
+                                            <option value="Life Insurance">Life Insurance</option>
+                                            <option value="Financial Planning">Financial Planning</option>
+                                            <option value="Retirement Planning">Retirement Planning</option>
+                                            <option value="All Services">All Services</option>
                                         </select>
                                     </div>
+
                                     <div>
                                         <label className="block text-sm mb-2 text-gray-700">Message</label>
-                                        <Textarea placeholder="Tell us about your needs..." rows={4} />
+                                        <Textarea name="message" placeholder="Tell us about your needs..." rows={4} required />
                                     </div>
-                                    <Button className="w-full text-white bg-slate-900 hover:bg-slate-800">
+
+                                    <Button type="submit" className="w-full text-white bg-slate-900 hover:bg-slate-800">
                                         Submit Inquiry
                                     </Button>
                                 </form>
