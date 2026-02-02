@@ -173,7 +173,7 @@ export function Contact() {
                                 Book a free, no obligation consulation with one of our expert advisors to discuss your financial goals.
                             </p>
                             <Button variant="outline" className="border-amber-600 text-amber-600 bg-white hover:bg-amber-600 hover:text-white w-full">
-                                Book Appointment
+                                Request An Appointment
                             </Button>
                         </div>
                     </div>
