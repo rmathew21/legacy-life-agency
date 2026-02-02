@@ -1,10 +1,37 @@
+import * as React from "react";
 import { Button } from "@/app/components/ui/button";
 import { Input } from "@/app/components/ui/input";
 import { Textarea } from "@/app/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/app/components/ui/card";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export function Contact() {
+    const [state, handleSubmit] = useForm("xkozzvrp");
+    const formRef = React.useRef(null);
+
+    // When submission succeeds, clear the form but keep section visible
+    React.useEffect(() => {
+        if (state.succeeded) {
+            formRef.current?.reset();
+        }
+    }, [state.succeeded]);
+
+    // if (state.succeeded) {
+    //     return (
+    //         <Card className="mb-8">
+    //             <CardHeader>
+    //                 <CardTitle>Message Sent!</CardTitle>
+    //             </CardHeader>
+    //             <CardContent>
+    //                 <p className="text-gray-700">
+    //                     Thanks! We'll get back to you shortly.
+    //                 </p>
+    //             </CardContent>
+    //         </Card>
+    //     );
+    // }
+
     return (
         <section id="contact" className="py-20 bg-linear-to-b from-amber-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,40 +50,79 @@ export function Contact() {
                             <CardHeader>
                                 <CardTitle>Send us a Message</CardTitle>
                             </CardHeader>
+
                             <CardContent>
-                                <form 
-                                    action="https://formspree.io/f/xkozzvrp"
-                                    method="POST"
-                                    className="space-y-4"
+                                {/* Success msg stays visible but doesn't replace the whole section */}
+                                {state.succeeded && (
+                                    <div 
+                                        role="status" 
+                                        className="mb-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-800"
                                     >
+                                        <p className="font-semibold">Message sent!</p>    
+                                        <p className="text-sm">
+                                            Thanks! We'll get back to you shortly.
+                                        </p>
+                                    </div>
+                                )}
+
+                                <form 
+                                    // action="https://formspree.io/f/xkozzvrp"
+                                    ref={formRef}
+                                    onSubmit={handleSubmit}
+                                    className="space-y-4"
+                                >
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
-                                            <label className="block text-sm mb-2 text-gray-700">First Name</label>
+                                            <label className="block text-sm mb-2 text-gray-700">
+                                                First Name
+                                            </label>
                                             <Input name="firstName" placeholder="John" required />
                                         </div>
                                         <div>
-                                            <label className="block text-sm mb-2 text-gray-700">Last Name</label>
+                                            <label className="block text-sm mb-2 text-gray-700">
+                                                Last Name
+                                            </label>
                                             <Input name="lastName" placeholder="Smith" required />
                                         </div>
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm mb-2 text-gray-700">Email</label>
-                                        <Input name="email" type="email" placeholder="john.smith@example.com" required />
+                                        <label className="block text-sm mb-2 text-gray-700">
+                                            Email
+                                        </label>
+                                        <Input 
+                                            name="email" 
+                                            type="email" 
+                                            placeholder="john.smith@example.com" 
+                                            required 
+                                        />
+                                        <ValidationError 
+                                            prefix="Email" 
+                                            field="email" 
+                                            errors={state.errors} 
+                                        />
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm mb-2 text-gray-700">Phone</label>
-                                        <Input name="phone" type="tel" placeholder="(555) 555-5555" />
+                                        <label className="block text-sm mb-2 text-gray-700">
+                                            Phone
+                                        </label>
+                                        <Input 
+                                            name="phone" 
+                                            type="tel" 
+                                            placeholder="(555) 555-5555" 
+                                        />
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm mb-2 text-gray-700">I'm interested in:</label>
+                                        <label className="block text-sm mb-2 text-gray-700">
+                                            I'm interested in:
+                                        </label>
                                         <select 
                                             name="interest"
                                             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-600"
                                             defaultValue="Life Insurance"
-                                            >
+                                        >
                                             <option value="Life Insurance">Life Insurance</option>
                                             <option value="Financial Planning">Financial Planning</option>
                                             <option value="Retirement Planning">Retirement Planning</option>
@@ -65,13 +131,31 @@ export function Contact() {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm mb-2 text-gray-700">Message</label>
-                                        <Textarea name="message" placeholder="Tell us about your needs..." rows={4} required />
+                                        <label className="block text-sm mb-2 text-gray-700">
+                                            Message
+                                        </label>
+                                        <Textarea 
+                                            name="message" 
+                                            placeholder="Tell us about your needs..." 
+                                            rows={4} 
+                                            required 
+                                        />
+                                        <ValidationError 
+                                            prefix="Message" 
+                                            field="message" 
+                                            errors={state.errors} 
+                                        />
                                     </div>
 
-                                    <Button type="submit" className="w-full text-white bg-slate-900 hover:bg-slate-800">
-                                        Submit Inquiry
+                                    <Button 
+                                        type="submit" 
+                                        disabled={state.submitting}
+                                        className="w-full text-white bg-slate-900 hover:bg-slate-800 disabled:opacity-60"
+                                        >
+                                        {state.submitting ? "Sending..." : "Submit Inquiry"}
                                     </Button>
+
+                                    <ValidationError errors={state.errors} />
                                 </form>
                             </CardContent>
                         </Card>
