@@ -7,7 +7,7 @@ import { Mail } from "lucide-react";
 import { useForm, ValidationError } from "@formspree/react";
 
 export function Contact() {
-    const [state, handleSubmit] = useForm("xkozzvrp");
+    const [state, handleSubmit] = useForm("mdadpwje");
     const formRef = React.useRef(null);
 
     // When submission succeeds, clear the form but keep section visible
