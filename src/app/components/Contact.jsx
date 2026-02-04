@@ -19,6 +19,7 @@ export function Contact() {
   const [reachMethod, setReachMethod] = React.useState("email");
   const [phonePreference, setPhonePreference] = React.useState("either");
   const [submissionType, setSubmissionType] = React.useState("inquiry");
+  const [lastSubmitted, setLastSubmitted] = React.useState(null);
 
   const shouldShowPhone = reachMethod === "phone" || reachMethod === "both";
   const shouldShowEmail = reachMethod === "email" || reachMethod === "both";
@@ -27,8 +28,9 @@ export function Contact() {
   React.useEffect(() => {
     if (state.succeeded) {
       formRef.current?.reset();
+      if (lastSubmitted === "appointment") setShowAppt(false);
     }
-  }, [state.succeeded]);
+  }, [state.succeeded, lastSubmitted]);
 
   return (
     <section
@@ -62,7 +64,7 @@ export function Contact() {
 
                 <CardContent className="space-y-4">
                   {/* Success msg stays visible but doesn't replace the whole section */}
-                  {state.succeeded && (
+                  {state.succeeded && lastSubmitted === "inquiry" && (
                     <div
                       role="status"
                       className="mb-2 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-800"
@@ -166,6 +168,7 @@ export function Contact() {
                     type="submit"
                     onClick={() => {
                       setSubmissionType("inquiry");
+                      setLastSubmitted("inquiry");
                       setShowAppt(false);
                     }}
                     disabled={state.submitting}
@@ -243,6 +246,14 @@ export function Contact() {
                 <p className="text-white/80 mb-6">
                   Submit your preferences and we'll follow up to confirm a time.
                 </p>
+
+                {state.succeeded && lastSubmitted === "appointment" && (
+                    <div className="mb-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-900"
+                    >
+                        <p className="font-semibold">Appointment request sent!</p>
+                        <p className="text-sm">Thanks! We'll reach out to confirm a time.</p>
+                    </div>
+                )}
 
                 <Button
                   type="button"
@@ -446,7 +457,10 @@ export function Contact() {
 
                     <Button
                       type="submit"
-                      onClick={(e) => setSubmissionType("appointment")}
+                      onClick={(e) => {
+                        setSubmissionType("appointment");
+                        setLastSubmitted("appointment");
+                    }}
                       disabled={state.submitting}
                       className="w-full text-white  bg-amber-800 hover:bg-amber-600 disabled:opacity-60"
                     >
