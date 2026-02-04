@@ -12,7 +12,7 @@ import { Mail } from "lucide-react";
 import { useForm, ValidationError } from "@formspree/react";
 
 export function Contact() {
-  const [state, handleSubmit] = useForm("xkozzvrp"); // mine:xkozzvrp rosh:mdadpwje
+  const [state, handleSubmit] = useForm("mdadpwje"); // mine:xkozzvrp rosh:mdadpwje
   const formRef = React.useRef(null);
 
   const [showAppt, setShowAppt] = React.useState(false);
