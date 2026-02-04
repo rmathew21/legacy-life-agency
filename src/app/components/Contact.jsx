@@ -12,7 +12,7 @@ import { Mail } from "lucide-react";
 import { useForm, ValidationError } from "@formspree/react";
 
 export function Contact() {
-  const [state, handleSubmit] = useForm("mdadpwje"); // mine:xkozzvrp rosh:mdadpwje
+  const [state, handleSubmit, reset] = useForm("mdadpwje"); // mine:xkozzvrp rosh:mdadpwje
   const formRef = React.useRef(null);
 
   const [showAppt, setShowAppt] = React.useState(false);
@@ -26,11 +26,17 @@ export function Contact() {
 
   // When submission succeeds, clear the form but keep section visible
   React.useEffect(() => {
-    if (state.succeeded) {
+    if (!state.succeeded) return;
+    
+    const t = setTimeout(() => {
       formRef.current?.reset();
+      reset();
+
       if (lastSubmitted === "appointment") setShowAppt(false);
-    }
-  }, [state.succeeded, lastSubmitted]);
+    }, 5000);
+
+    return () => clearTimeout(t);
+  }, [state.succeeded, lastSubmitted, reset]);
 
   return (
     <section
