@@ -20,9 +20,18 @@ export function Contact() {
   const [phonePreference, setPhonePreference] = React.useState("either");
   const [submissionType, setSubmissionType] = React.useState("inquiry");
   const [lastSubmitted, setLastSubmitted] = React.useState(null);
+  const [selectedReasons, setSelectedReasons] = React.useState([]);
 
   const shouldShowPhone = reachMethod === "phone" || reachMethod === "both";
   const shouldShowEmail = reachMethod === "email" || reachMethod === "both";
+
+  const toggleReason = value => {
+    setSelectedReasons((prev) =>
+    prev.includes(value)
+    ? prev.filter((v) => v !== value)
+    : [...prev, value]    
+    );
+  };
 
   // When submission succeeds, clear the form but keep section visible
   React.useEffect(() => {
@@ -140,11 +149,13 @@ export function Contact() {
                     <select
                       name="interest"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-600"
-                      defaultValue="Life Insurance"
+                      required={submissionType === "inquiry"}
+                      defaultValue=""
                     >
+                    <option value="" disabled>Select a service..</option>
                       <option value="Life Insurance">Life Insurance</option>
-                      <option value="Financial Planning">
-                        Financial Planning
+                      <option value="Asset Management">
+                        Asset Management
                       </option>
                       <option value="Retirement Planning">
                         Retirement Planning
@@ -388,23 +399,40 @@ export function Contact() {
                     {/* Reason */}
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Reason for appointment
+                        Reason for appointment (select all that apply)
                       </label>
-                      <select
-                        name="appointment_reason"
-                        className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm"
-                        required={submissionType === "appointment"}
-                        defaultValue=""
-                      >
-                        <option value="" disabled>
-                          Select a reason...
-                        </option>
-                        <option value="life_planning">Life planning</option>
-                        <option value="financial_planning">
-                          Financial planning
-                        </option>
-                        <option value="retirement">Retirement</option>
-                      </select>
+
+                      <div className="space-y-2">
+                        {[
+                            { label: "Life planning", value: "life_planning" },
+                            { label: "Asset Management", value: "asset_management" },
+                            { label: "Retirement", value: "retirement" },
+                        ].map((reason) => (
+                            <label 
+                            key={reason.value} 
+                            className="flex items-center gap-2 text-sm"
+                            >
+                                <input 
+                                type="checkbox" 
+                                name="appointment_reason[]"
+                                className="h-4 w-4"
+                                value={reason.value}
+                                checked={selectedReasons.includes(reason.value)}
+                                onChange={() => toggleReason(reason.value)}
+                                // required={submissionType === "appointment" && index === 0}
+                                />
+                                {reason.label}
+                            </label>
+                        ))}
+                      </div>
+
+                      {/* Hidden Validator */}
+                      <input 
+                      type="hidden" 
+                      name="appointment_reason_required"
+                      value={selectedReasons.length > 0 ? "ok" : ""}
+                      required={submissionType === "appointment"}
+                      />
                     </div>
 
                     {/* Best days */}
