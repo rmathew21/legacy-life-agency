@@ -371,6 +371,20 @@ export function Contact() {
                       </div>
                     )}
 
+                    {/* Name */}
+                    <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Name
+                        </label>
+                        <Input 
+                        name="name"
+                        type="text"
+                        placeholder="John Smith" 
+                        autoComplete="name"
+                        required={submissionType === "appointment"}
+                        />
+                    </div>
+
                     {/* Reason */}
                     <div>
                       <label className="block text-sm font-medium mb-2">
