@@ -231,7 +231,7 @@ export function Contact() {
 
                       <div>
                         <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                        <p className="text-gray-600 break-all">
+                        <p className="text-gray-600 text-sm sm:text-base wrap-break-words">
                           roshanskariah@legacylifeagency.net
                         </p>
                         <p className="text-sm text-gray-500 mt-1">
