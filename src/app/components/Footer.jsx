@@ -65,7 +65,8 @@ export function Footer() {
                                 Powered by Robo Web Solutions
                             </a>
                         </p>
-                        <div className="flex space-x-6 mt-4 md:mt-0">
+                        {/* <div className="flex space-x-6 mt-4 md:mt-0"> */}
+                        <div className="flex flex-wrap gap-x-6 gap-y-2 mt-4 md:mt-0 text-sm">
                            <Link to="/privacy" className="hover:text-amber-400 transition-colors">Privacy Policy</Link>
                            <Link to="/terms" className="hover:text-amber-400 transition-colors">Terms of Service</Link>
                            <Link to="/disclaimer" className="hover:text-amber-400 transition-colors">Disclaimers</Link>
