@@ -9,9 +9,9 @@ const services = [
         description: "Protect your loved ones with coomprehensive life insurance coverage tailored to your family's unique needs.",
         image: "https://images.unsplash.com/photo-1767600466928-652797e00824?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBwcm90ZWN0aW9uJTIwaW5zdXJhbmNlfGVufDF8fHx8MTc2OTQzNjc1NHww&ixlib=rb-4.1.0&q=80&w=1080",
         features: [
-            "Term Lie Insurance",
+            "Term Life Insurance",
             "Whole Life Insurance",
-            "Universal Lie Insurance",
+            "Universal Life Insurance",
             "Custom Coverage Options"
         ]
     },
