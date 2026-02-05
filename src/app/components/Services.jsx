@@ -17,7 +17,7 @@ const services = [
     },
     {
         icon: TrendingUp,
-        title: "Financial Planning",
+        title: "Asset Management",
         description: "Strategic financial guidance to help you achieve your goals and build lasting wealth for future generations.",
         image: "https://images.unsplash.com/photo-1768839721776-038d3070721e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBwbGFubmluZyUyMGFkdmlzb3J8ZW58MXx8fHwxNzY5MzU2MDg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
         features: [
