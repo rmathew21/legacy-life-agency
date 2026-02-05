@@ -1,23 +1,18 @@
-import { Nav } from "./app/components/Nav";
-import { Hero } from "./app/components/Hero";
-import { About } from "./app/components/About";
-import { Services } from "./app/components/Services";
-import { FAQ } from "./app/components/FAQ";
-import { Contact } from "./app/components/Contact";
-import { Footer } from "./app/components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
+import Disclaimer from "./pages/Disclaimer";
 
 export default function App() {
   return (
-    <div className="min-h-screen">
-      <Nav />
-      <main>
-      <Hero />
-      <About />
-      <Services />
-      <FAQ />
-      <Contact />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

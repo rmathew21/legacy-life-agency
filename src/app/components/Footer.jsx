@@ -1,4 +1,5 @@
 import { Facebook, X, Linkedin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
     return (
@@ -65,9 +66,9 @@ export function Footer() {
                             </a>
                         </p>
                         <div className="flex space-x-6 mt-4 md:mt-0">
-                            <a href="#" className="hover:text-amber-400 transition-colors">Privacy Policy</a>
-                            <a href="#" className="hover:text-amber-400 transition-colors">Terms of Service</a>
-                            <a href="#" className="hover:text-amber-400 transition-colors">Disclaimers</a>
+                           <Link to="/privacy" className="hover:text-amber-400 transition-colors">Privacy Policy</Link>
+                           <Link to="/terms" className="hover:text-amber-400 transition-colors">Terms of Service</Link>
+                           <Link to="/disclaimer" className="hover:text-amber-400 transition-colors">Disclaimers</Link>
                         </div>
                     </div>
                 </div>
