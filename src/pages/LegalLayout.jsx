@@ -4,11 +4,11 @@ export default function LegalLayout({ title, children }) {
     return (
         <div className="min-h-screen bg-white">
             <header className="border-b">
-                <div className="max-w-4xl mx-auto px-6 py-24">
-                    <Link to="/" className="text-sm underline">
+                <div className=" relative max-w-4xl mx-auto px-6 py-24">
+                    <Link to="/" className="absolute left-6 top-24 text-sm underline text-slate-600 hover:text-slate-900">
                         Back to Home
                     </Link>
-                    <h1 className="text-3xl font-bold mt-3">{title}</h1>
+                    <h1 className="text-center text-3xl md:text-4xl font-bold mt-3">{title}</h1>
                 </div>
             </header>
 
