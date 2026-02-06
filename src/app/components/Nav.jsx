@@ -23,7 +23,7 @@ export function Nav() {
                         <h1 className="text-2xl font-bold text-slate-900">Legacy Life Agency</h1>
                     </div> */}
                     <div className="flex items-center gap-3">
-                        <a href="" className="flex items-center gap-3">
+                        <a href="/" className="flex items-center gap-3">
                             <img 
                                 src={logo}
                                 alt="Legacy Life Agency logo" 
