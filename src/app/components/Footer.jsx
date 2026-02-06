@@ -16,18 +16,18 @@ export function Footer() {
                     <div>
                         <h4 className="font-bold mb-4">Services</h4>
                         <ul className="space-y-2 text-sm">
-                            <li><a href="#services" className="text-gray-400 hover:text-amber-400 transition-colors">Life Insurance</a></li>
-                            <li><a href="#services" className="text-gray-400 hover:text-amber-400 transition-colors">Financial Planning</a></li>
-                            <li><a href="#services" className="text-gray-400 hover:text-amber-400 transition-colors">Retirement Planning</a></li>
+                            <li><a href="/#services" className="text-gray-400 hover:text-amber-400 transition-colors">Life Insurance</a></li>
+                            <li><a href="/#services" className="text-gray-400 hover:text-amber-400 transition-colors">Financial Planning</a></li>
+                            <li><a href="/#services" className="text-gray-400 hover:text-amber-400 transition-colors">Retirement Planning</a></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="font-bold mb-4">Company</h4>
                         <ul className="space-y-2 text-sm">
-                            <li><a href="#about" className="text-gray-400 hover:text-amber-400 transition-colors">About Us</a></li>
+                            <li><Link to="/#about" className="text-gray-400 hover:text-amber-400 transition-colors">About Us</Link></li>
                             {/* <li><a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">Our Team</a></li> */}
-                            <li><a href="#contact" className="text-gray-400 hover:text-amber-400 transition-colors">Contact</a></li>
+                            <li><Link to="/#contact" className="text-gray-400 hover:text-amber-400 transition-colors">Contact</Link></li>
                             {/* <li><a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">Careers</a></li> */}
                         </ul>
                     </div>
