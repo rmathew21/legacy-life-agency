@@ -172,23 +172,7 @@ export default function PrivacyPolicy() {
                 <p className="mt-3 text-sm leading-7 text-slate-700">{s.body}</p>
             </div>
         ))
-        }
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-        
-
-        
-
-        
+        } 
       </section>
     </LegalLayout>
   );
