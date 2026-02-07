@@ -72,18 +72,22 @@ export default function Terms() {
 
             Your access to and use of this website is subject to these Terms and Conditions. You agree not to use this website for any purpose that is unlawful or prohibited by these Terms and Conditions. By using this website, you are fully accepting the terms, conditions and disclaimers contained in this notice. If you do not accept these Terms and Conditions, you must immediately stop using this website.
             
-            These Terms of Use shall be governed by, construed and enforced in accordance with the laws of the state of Missouri, as they are applied to agreements entered into and to be performed entirely within such jurisdiction.
+            These Terms of Use shall be governed by, construed and enforced in accordance with the laws of the state of Texas, as they are applied to agreements entered into and to be performed entirely within such jurisdiction.
             
-            To the extent you have in any manner violated or threatened to violate Roshan Skariah and “legacylifeagency.net”’s and/or its affiliates’ intellectual property rights Roshan Skariah and “legacylifeagency.net” and/or its affiliates may seek injunctive or other appropriate relief in any state or federal court in the state of Missouri, and you consent to exclusive jurisdiction and venue in such courts.
+            To the extent you have in any manner violated or threatened to violate Roshan Skariah and “legacylifeagency.net”’s and/or its affiliates’ intellectual property rights Roshan Skariah and “legacylifeagency.net” and/or its affiliates may seek injunctive or other appropriate relief in any state or federal court in the state of Texas, and you consent to exclusive jurisdiction and venue in such courts.
             
             If any provision of these terms is void or unenforceable in whole or in part, the remaining provisions of these Terms of Use shall not be affected thereby.`,
           },
-
         ].map((s) => (
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                <h2 className="text-lg font-semibold text-slate-900">{s.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-slate-700">{s.body}</p>
-            </div>
+          <div className="rounded-2xl border border-slate-200/70 bg-white p-6 shadow-sm transition hover:shadow-md">
+            <h2 className="text-lg font-semibold text-slate-900">{s.title}</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-700 whitespace-pre-line">{s.body}</p>
+            {/* <div className="mt-3 prose prose-slate max-w-none prose-p:leading-7">
+                {s.body.split("\n\n").map((p,i) => (
+                    <p key={i}>{p.trim()}</p>
+                ))}
+            </div> */}
+          </div>
         ))}
       </section>
     </LegalLayout>
