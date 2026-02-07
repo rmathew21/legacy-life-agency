@@ -12,7 +12,7 @@ export default function LegalLayout({ title, children }) {
                 </div>
             </header>
 
-            <main className="max-w-3xl mx-auto px-4 py-10 prose prose-slate">
+            <main className="max-w-3xl mx-auto px-4 py-12 prose prose-slate prose-p:leading-8">
                 {children}
             </main>
         </div>
