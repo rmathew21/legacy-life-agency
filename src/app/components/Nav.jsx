@@ -25,7 +25,7 @@ export function Nav() {
                     <div className="flex items-center gap-3">
                         <a href="/" className="flex items-center gap-3">
                             <img 
-                                src={logo}
+                                src={logo3}
                                 alt="Legacy Life Agency logo" 
                                 className="h-8 w-auto"
                             />

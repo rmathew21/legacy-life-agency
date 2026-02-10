@@ -5,7 +5,10 @@ export function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center bg-linear-to-br from-slate-900 via-slate-800 to-slate-950">
             <div className="absolute inset-0 bg-black/40"></div>
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1758518730384-be3d205838e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoYW5kc2hha2UlMjBidXNpbmVzc3xlbnwxfHx8fDE3Njk0NDQwMDd8MA&ixlib=rb-4.1.0&q=80&w=1080')] bg-cover bg-center opacity-20"></div>
+            {/* <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1758518730384-be3d205838e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoYW5kc2hha2UlMjBidXNpbmVzc3xlbnwxfHx8fDE3Njk0NDQwMDd8MA&ixlib=rb-4.1.0&q=80&w=1080')] bg-cover bg-center opacity-20"></div> */}
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1596633607590-7156877ef734?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-30"></div>
+            {/* <div className="absolute inset-0 bg-[url('https://plus.unsplash.com/premium_photo-1661421746164-b8b53de3bd4e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-30"></div> */}
+            {/* <div className="absolute inset-0 bg-[url('https://media.istockphoto.com/id/2214627937/photo/hello-its-nice-to-meet-you.jpg?s=1024x1024&w=is&k=20&c=MVSRDKnoe3z_VSYaLP9tNajrnQJOKRPysbbhapZMqo8=')] bg-cover bg-center opacity-30"></div> */}
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6">
