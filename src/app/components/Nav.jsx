@@ -4,6 +4,8 @@ import { useState } from "react";
 import logo from "@/assets/logoBlue@2x.png"
 import logo2 from "@/assets/logoBlueLLA.jpeg"
 import logo3 from "@/assets/logo-blue.svg"
+import logo4 from "@/assets/legacy-life-agency-logo.svg"
+import logoGold from "@/assets/torchGold2.svg"
 
 export function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,16 +20,16 @@ export function Nav() {
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center py-4">
+                <div className="flex justify-between items-center h-20">
                     {/* <div className="flex items-center">
                         <h1 className="text-2xl font-bold text-slate-900">Legacy Life Agency</h1>
                     </div> */}
                     <div className="flex items-center gap-3">
                         <a href="/" className="flex items-center gap-3">
                             <img 
-                                src={logo3}
+                                src={logoGold}
                                 alt="Legacy Life Agency logo" 
-                                className="h-8 w-auto"
+                                className="h-full max-h-18 w-auto object-contain"
                             />
                             <span className="text-2xl font-bold tracking-wide text-slate-900">
                                 Legacy Life Agency
