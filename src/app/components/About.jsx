@@ -29,7 +29,7 @@ export function About() {
       <div className="max-w-7x1 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 text-center sm:text-left">
               Why Choose Legacy Life Agency?
             </h2>
             <p className="text-lg text-gray-600 mb-6">
