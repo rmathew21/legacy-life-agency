@@ -1,10 +1,6 @@
 import { Button } from "@/app/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logoBlue@2x.png"
-import logo2 from "@/assets/logoBlueLLA.jpeg"
-import logo3 from "@/assets/logo-blue.svg"
-import logo4 from "@/assets/legacy-life-agency-logo.svg"
 import logoGold from "@/assets/torchGold2.svg"
 
 export function Nav() {
@@ -31,8 +27,8 @@ export function Nav() {
                                 alt="Legacy Life Agency logo" 
                                 className="h-full max-h-18 w-auto object-contain"
                             />
-                            <span className="text-2xl font-bold tracking-wide text-slate-900">
-                                Legacy Life Agency
+                            <span className="text-2xl tracking-wide font-bold text-[var(--color-gold)] font-[var(--font-montserrat)]">
+                                LEGACY LIFE AGENCY
                             </span>
                         </a>
                     </div>

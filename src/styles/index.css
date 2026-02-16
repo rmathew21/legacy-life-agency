@@ -5,6 +5,8 @@
 
 @theme {
   --font-sans: 'Roboto', system-ui, sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --color-gold: #C9A24D;
 }
 
 @layer utilities {
