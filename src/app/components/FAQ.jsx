@@ -8,36 +8,44 @@ import {
 const faqs = [
     {
         question: "What types of life insurance do you offer?",
-        answer: "We offer a comprehensive range of life insurance products including Term Life Insurance, Whole Life Insurance, Universal Lie Insurance, and Variable Lie Insurance. Each type has unique benefits, and we'll help you choose the coverage that best fits your needs and budget."
+        answer: "We offer a comprehensive range of life insurance products including Term Life Insurance, Whole Life Insurance, and other great Insurance options. Each type has unique benefits, and we’ll help you choose the coverage that best fits your needs and budget."
     },
     {
-        question: "How much life insurance coverage do I need",
+        question: "What is the difference between Term and Whole Life Insurance?",
+        answer: (
+            <>
+                <strong>Term Insurance</strong> is like “renting” coverage for a specific period (e.g. 20 years) — it’s affordable and great for temporary needs. <strong></strong> is like “owning”—it lasts your entire life and includes a cash-value component that can grow over time."
+            </>
+        )
+    }, 
+    {
+        question: "How much life insurance coverage do I need?",
         answer: "The amount of coverage you need depends on several factors including you income, debts, familiy size, and future financial goals. A common rule of thumb is 10-12 times your annual income, but we provide personalized assessments to determine the right coverage for your specific situation."
+    }, 
+    {
+        question: "What happens if I outlive my Term Life Policy?",
+        answer: 'Once the term ends, the coverage typically expires. However, many of our policies include a "Conversion Option", allowing you to switch to a permanent policy wihout taking a new medical exam, regardless of your health at that time.'
+    }, 
+    {
+        question: 'What is “Cash Value” in Whole Life Insurance and how can I use it?',
+        answer: 'Cash value is the “living benefit” of a permanent policy. As you pay premiums, a portion grows tax-deferred. You can borrow against it for emergencies, use it to pay your premiums later in life, or even use it to fund a business venture. You create your own bank within your Whole Life Policy, which you can always borrow from without having to borrow from a lender ever again.'
     }, 
     {
         question: "When should I start planning for retirement?",
         answer: "The earlier you start, the better! Ideally, you should begin retirement planning in your 20s or 30s to take full advantage of compound interest. However, it's never too late to start. We can create a customized retirement plan regardless of your age or current financial situation."
     }, 
     {
-        question: "What's the difference between financial planning and retirement planning?",
-        answer: "Financial planning is a comprehensive approach that covers all aspects of your financial life including budgeting, investments, insurance, and estate planning. Retirement planning is a specific subset that focuses on accumulating assets and creating income streams for your retirement years. Both work together to secure your financial future."
+        question: 'How does my health affect my premiums?',
+        answer: 'Insurance companies use “underwriting” to set your rates based on your age, health history, and lifestyle. However, we work with a variety of carriers to find the best fit for your specific profile, even if you have pre-existing conditions.'
     }, 
     {
-        question: "Do I need to have a lot of money to work with a financial planner?",
-        answer: "Not at all! We work with clients at various financial stages. Whether you're just starting to build wealth or have substantial assets, our advisors can provide valuable guidance. We believe everyone deserves access to professional financial advice to help secure their future."
+        question: 'Which Insurance companies do you work with?',
+        answer: (
+            <>
+            I partner with all the major, A-rated insurance providers in the United States, such as Lafayette Life, Mass Mutual, and New York Life. Because I am independent, I don’t work <em>for</em> the insurance companies; I work <em>for you</em>. I personally negotiate with these carriers to design a custom policy that fits your unique needs and secures your legacy.
+            </>
+        )   
     }, 
-    {
-        question: "How often should I review my financial plan?",
-        answer: "We recommend reviewing your financial plan at least annually, or whenever you experience major life changes such as marriage, divorce, birth of a child, career change, or inheritance. Regular reviews ensure your plan stays aligned with your current goals and circumstances."
-    }, 
-    {
-        question: "Are your consultations really free?",
-        answer: "Yes! We offer free, no-obligation initial consultations. This gives us the opportunity to understand your needs and explain how we can help., while allowing you to get to know our team and approach without any commitment or pressure."
-    }, 
-    {
-        question: "How do you get paid for your services?",
-        answer: "Our compensation structure varies depending on the services provided. We may earn commissions on insurance products, charge fees for financial planning services, or use a combination of both. We're committed to full transparency and will clearly explain all costs before you make any decisions."
-    } 
 ];
 
 export function FAQ() {
