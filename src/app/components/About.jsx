@@ -14,7 +14,7 @@ const values = [
   {
     icon: Award, 
     title: "Expert Guidance",
-    description: "Our experienced team provides professional advise you can trust."
+    description: "Our seasoned team delivers strategic insights and professional advise you can depend on."
   },
   {
     icon: Heart,
@@ -26,6 +26,9 @@ const values = [
 export function About() {
   return (
     <section id="about" className="py-20 bg-white">
+    {/* //  <section id="about" className="py-20 bg-slate-900">   */}
+    {/* <section id="about" className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-[#1c1405] relative overflow-hidden"> */}
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(201,162,77,0.15),transparent_40%)]"></div> */}
       <div className="max-w-7x1 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
@@ -36,21 +39,45 @@ export function About() {
                 At Legacy Life Agency, we understand that planning for the future isn't just about numbers-it's about the people you love and the dreams you hold dear.
             </p>
             <p className="text-lg text-gray-600 mb-6">
-                Our team of dedicated professionals brings decades of combined experience to help you navigate lie's financial decisions with confidence and clarity.
+                Our team of dedicated professionals bring years of combined service to help you navigate life's financial decisions with confidence and clarity.
             </p>
             <p className="text-lg text-gray-600">
                 Whether you're protecting your family, planning for retirement, or building wealth for future generations, we're here to guide you every step of the way.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-6">
+
+          {/* option 1 */}
+          {/* <div className="grid md:grid-cols-2 gap-6">
             {values.map((value) => (
-                <div key={value.title} className="p-6 bg-amber-50 rounded-lg hover:bg-amber-100 transition-colors">
+                <div key={value.title} className="p-6 bg-slate-800/80 backdrop-blur rounded-x1 border border-slate-700 hover:border-[#C9A24D] transition-all duration-300">
                     <value.icon className="h-10 w-10 text-amber-700 mb-4" />
-                    <h3 className="font-bold text-gray-900 mb-2">{value.title}</h3>
-                    <p className="text-sm text-gray-600">{value.description}</p>
+                    <h3 className="font-bold text-white mb-2">{value.title}</h3>
+                    <p className="text-sm text-slate-300">{value.description}</p>
+                </div>
+            ))}
+          </div> */}
+
+          {/* option 2 */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {values.map((value) => (
+                <div key={value.title} className="p-6 bg-slate-800 rounded-xl  hover:bg-slate-700 transition">
+                    <value.icon className="h-10 w-10 text-amber-700 mb-4" />
+                    <h3 className="font-bold text-white mb-2">{value.title}</h3>
+                    <p className="text-sm text-slate-300">{value.description}</p>
                 </div>
             ))}
           </div>
+
+          {/* option 3 */}
+          {/* <div className="grid md:grid-cols-2 gap-6">
+            {values.map((value) => (
+                <div key={value.title} className="p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl  hover:bg-white/10 transition">
+                    <value.icon className="h-10 w-10 text-amber-700 mb-4" />
+                    <h3 className="font-bold text-white mb-2">{value.title}</h3>
+                    <p className="text-sm text-slate-300">{value.description}</p>
+                </div>
+            ))}
+          </div> */}
         </div>
       </div>
     </section>
