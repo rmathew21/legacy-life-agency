@@ -43,20 +43,22 @@ const services = [
 
 export function Services() {
     return (
-        <section id="services" className="py-5 bg-gradient-to-be from-white to-amber-50">
+        <section id="services" className="py-15 bg-linear-to-br from-slate-900 via-slate-800 to-[#1c1405] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(201,162,77,0.15),transparent_40%)]"></div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
                         Our Services
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                         Comprehensive solutions designed to protect your present and secure your future
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {services.map((service) => (
-                        <Card key={service.title} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        // <Card key={service.title} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <Card key={service.title} className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl hover:bg-white/10 transition">
                             <div className="relative h-48 overflow-hidden">
                                 <ImageWithFallback
                                     src={service.image}
@@ -71,8 +73,8 @@ export function Services() {
                                 </div>
                             </div>
                             <CardHeader>
-                                <CardTitle className="text-2xl">{service.title}</CardTitle>
-                                <CardDescription className="text-base">
+                                <CardTitle className="text-2xl text-white">{service.title}</CardTitle>
+                                <CardDescription className="text-base text-slate-300">
                                     {service.description}
                                 </CardDescription>
                             </CardHeader>
@@ -81,7 +83,7 @@ export function Services() {
                                     {service.features.map((feature) => (
                                         <li key={feature} className="flex items-start">
                                             <span className="text-amber-600 mr-2">✓</span>
-                                            <span className="text-gray-700">{feature}</span>
+                                            <span className="text-gray-300">{feature}</span>
                                         </li>
                                     ))}
                                 </ul>

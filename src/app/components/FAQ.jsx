@@ -50,13 +50,15 @@ const faqs = [
 
 export function FAQ() {
     return (
-        <section id="faq" className="py-20 bg-white">
+        // <section id="faq" className="py-20 bg-white">
+        <section id="faq" className="py-15 bg-linear-to-br from-slate-900 via-slate-800 to-[#1c1405] relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(201,162,77,0.15),transparent_40%)]"></div>
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
                         Frequently Asked Questions
                     </h2>
-                    <p className="text-xl text-gray-600">
+                    <p className="text-xl text-slate-300">
                         Get answers to common questions about our Services
                     </p>
                 </div>
@@ -66,12 +68,13 @@ export function FAQ() {
                         <AccordionItem 
                             key={index}
                             value={`item-${index}`}
-                            className="border border-gray-200 rounded-lg px-6 bg-white hover:shadow-md transition-shadow"
+                            // className="border border-gray-200 rounded-lg px-6 bg-white hover:shadow-md transition-shadow"
+                            className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl hover:bg-white/10 transition px-6"
                         >
                             <AccordionTrigger className="text-left hover:no-underline py-6 ">
-                                <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
+                                <span className="font-semibold text-slate-300 pr-4">{faq.question}</span>
                             </AccordionTrigger>
-                            <AccordionContent className="text-gray-600 pb-6">
+                            <AccordionContent className="text-white pb-6">
                                 {faq.answer}
                             </AccordionContent>
                         </AccordionItem>
@@ -79,7 +82,7 @@ export function FAQ() {
                 </Accordion>
 
                 <div className="mt-12 text-center">
-                    <p className="text-gray-600 mb-4">Still have questions?</p>
+                    <p className="text-slate-300 mb-4">Still have questions?</p>
                     <a 
                         href="#contact"
                         className="text-amber-700 hover:text-amber-800 font-semibold underline"
