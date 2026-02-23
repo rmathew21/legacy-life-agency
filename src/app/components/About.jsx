@@ -27,7 +27,7 @@ export function About() {
   return (
     // <section id="about" className="py-20 bg-white">
      //  <section id="about" className="py-20 bg-slate-900">   
-    <section id="about" className="py-12 scroll-mt-24 bg-[#0f172a] relative overflow-hidden">
+    <section id="about" className="py-12 scroll-mt-20 bg-[#0f172a] relative overflow-hidden">
       {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(201,162,77,0.15),transparent_40%)]"></div> */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
