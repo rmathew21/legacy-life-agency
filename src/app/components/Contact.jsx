@@ -254,9 +254,9 @@ export function Contact() {
                         <p className="text-slate-300 text-sm sm:text-base wrap-break-words">
                           roshanskariah@legacylifeagency.net
                         </p>
-                        <p className="text-sm text-slate-400 mt-1">
+                        {/* <p className="text-sm text-slate-400 mt-1">
                           We'll respond shortly
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                   </CardContent>
