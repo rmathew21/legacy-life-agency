@@ -52,7 +52,7 @@ export function Contact() {
       id="contact"
     //   className="py-20 bg-linear-to-b from-amber-50 to-white"
     // >
-      className="py-20 bg-[#0f172a] relative overflow-hidden">
+      className="py-16 scroll-mt-24 bg-[#0f172a] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
