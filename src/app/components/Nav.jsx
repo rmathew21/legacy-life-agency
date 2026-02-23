@@ -27,7 +27,7 @@ export function Nav() {
                                 alt="Legacy Life Agency logo" 
                                 className="h-full max-h-18 w-auto object-contain"
                             />
-                            <span className="text-2xl tracking-wide font-bold text-[var(--color-gold)] font-[var(--font-montserrat)]">
+                            <span className="text-2xl tracking-wide font-bold text-gold ">
                                 LEGACY LIFE AGENCY
                             </span>
                         </a>
@@ -79,8 +79,10 @@ export function Nav() {
                                 {item.name}
                                 </a>
                             ))}
-                            <Button className="bg-amber-600 hover:bg-amber-700 w-full">
-                                Get Started
+                            <Button asChild className="bg-amber-600 hover:bg-amber-700 w-full">
+                                <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+                                    Get Started
+                                </a>
                             </Button>
                         </div>
                     </nav>
