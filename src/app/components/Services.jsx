@@ -19,7 +19,7 @@ const services = [
         icon: TrendingUp,
         title: "Asset Management",
         description: "Strategic financial guidance to help you achieve your goals and build lasting wealth for future generations.",
-        image: "https://images.unsplash.com/photo-1620228885847-9eab2a1adddc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGFzc2V0JTIwbWFuYWdlbWVudHxlbnwwfHwwfHx8MA%3D%3D",
+        image: "https://plus.unsplash.com/premium_photo-1688822012858-4b32326cb73b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTkzfHxpbnZlc3RtZW50fGVufDB8fDB8fHww",
         features: [
             "Investment Strategies",
             "Estate Planning",
