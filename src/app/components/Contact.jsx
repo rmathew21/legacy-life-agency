@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/app/components/ui/card";
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { useForm, ValidationError } from "@formspree/react";
 
 export function Contact() {
@@ -50,14 +50,18 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-linear-to-b from-amber-50 to-white"
-    >
+    //   className="py-20 bg-linear-to-b from-amber-50 to-white"
+    // >
+      className="py-20 bg-[#0f172a] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Get in Touch
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          {/* <h2 className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8">
+            Get in Touch
+          </h2> */}
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             Ready to start planning your legacy? We're here to help.
           </p>
         </div>
@@ -72,7 +76,7 @@ export function Contact() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Left Column */}
             <div>
-              <Card className="mb-8">
+              <Card className="mb-8 bg-white/5 border border-white/10 text-slate-100 shadow-lg">
                 <CardHeader>
                   <CardTitle>Send us a Message</CardTitle>
                 </CardHeader>
@@ -82,10 +86,10 @@ export function Contact() {
                   {state.succeeded && lastSubmitted === "inquiry" && (
                     <div
                       role="status"
-                      className="mb-2 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-800"
+                      className="mb-2 rounded-lg border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 text-emerald-200"
                     >
                       <p className="font-semibold">Message sent!</p>
-                      <p className="text-sm">
+                      <p className="text-sm text-emarald-200/90">
                         Thanks! We'll get back to you shortly.
                       </p>
                     </div>
@@ -93,29 +97,31 @@ export function Contact() {
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm mb-2 text-gray-700">
+                      <label className="block text-sm mb-2 text-gray-200">
                         First Name
                       </label>
                       <Input
                         name="firstName"
                         placeholder="John"
                         required={submissionType === "inquiry"}
+                        className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm mb-2 text-gray-700">
+                      <label className="block text-sm mb-2 text-gray-200">
                         Last Name
                       </label>
                       <Input
                         name="lastName"
                         placeholder="Smith"
                         required={submissionType === "inquiry"}
+                        className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm mb-2 text-gray-700">
+                    <label className="block text-sm mb-2 text-gray-200">
                       Email
                     </label>
                     <Input
@@ -123,6 +129,7 @@ export function Contact() {
                       type="email"
                       placeholder="john.smith@example.com"
                       required={submissionType === "inquiry"}
+                      className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                     />
                     <ValidationError
                       prefix="Email"
@@ -132,40 +139,41 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-sm mb-2 text-gray-700">
+                    <label className="block text-sm mb-2 text-gray-200">
                       Phone
                     </label>
                     <Input
                       name="phone"
                       type="tel"
                       placeholder="(555) 555-5555"
+                      className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm mb-2 text-gray-700">
+                    <label className="block text-sm mb-2 text-gray-200">
                       I'm interested in:
                     </label>
                     <select
                       name="interest"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-600"
+                      className="w-full px-3 py-2 border border-white/10 rounded-md bg-slate-950/60 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-400/40 focus:border-amber-400/40"
                       required={submissionType === "inquiry"}
                       defaultValue=""
                     >
-                    <option value="" disabled>Select a service..</option>
-                      <option value="Life Insurance">Life Insurance</option>
+                    <option value="" disabled className="bg-slate-950">Select a service..</option>
+                      <option value="Life Insurance className=bg-slate-950">Life Insurance</option>
                       <option value="Asset Management">
                         Asset Management
                       </option>
-                      <option value="Retirement Planning">
+                      <option value="Retirement Planning className=bg-slate-950">
                         Retirement Planning
                       </option>
-                      <option value="All Services">All Services</option>
+                      <option value="All Services className=bg-slate-950">All Services</option>
                     </select>
                   </div>
 
                   <div>
-                    <label className="block text-sm mb-2 text-gray-700">
+                    <label className="block text-sm mb-2 text-gray-200">
                       Message
                     </label>
                     <Textarea
@@ -173,6 +181,7 @@ export function Contact() {
                       placeholder="Tell us about your needs..."
                       rows={4}
                       required={submissionType === "inquiry"}
+                      className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                     />
                     <ValidationError
                       prefix="Message"
@@ -189,7 +198,7 @@ export function Contact() {
                       setShowAppt(false);
                     }}
                     disabled={state.submitting}
-                    className="w-full text-white bg-slate-900 hover:bg-slate-800 disabled:opacity-60"
+                    className="w-full text-slate-900 bg-amber-400 hover:bg-amber-300 disabled:opacity-60"
                   >
                     {state.submitting ? "Sending..." : "Submit Inquiry"}
                   </Button>
@@ -201,21 +210,21 @@ export function Contact() {
             {/* Right Column */}
             <div className="space-y-6">
               {/* Phone card */}
-              <Card className="rounded-xl overflow-hidden transition hover:shadow-md hover:-translate-y-0.5">
+              <Card className="rounded-xl overflow-hidden transition hover:shadow-md hover:-translate-y-0.5 bg-slate-900/60 border border-white/10 text-slate-100">
                 <a
                   href="tel:+19725228687"
                   aria-label="Call Legacy Life Agency at 972 522 8687"
-                  className="block focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  className="block focus:outline-none focus:ring-2 focus:ring-amber-400/60"
                 >
-                  <CardContent className="pt-6 transition cursor-pointer hover:bg-amber-50">
+                  <CardContent className="pt-6 transition cursor-pointer hover:bg-white/5">
                     <div className="flex items-start space-x-4">
-                      <div className="bg-amber-100 p-3 rounded-lg">
-                        <Mail className="h-6 w-6 text-amber-700" />
+                      <div className="bg-amber-500/15 p-3 rounded-lg border border-amber-400/20">
+                        <Phone className="h-6 w-6 text-amber-300" />
                       </div>
 
                       <div>
-                        <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
-                        <p className="text-gray-600 break-all">
+                        <h3 className="font-bold text-slate-100 mb-1">Phone</h3>
+                        <p className="text-slate-300 break-all">
                           (972) 522-8687
                         </p>
                         {/* <p className="text-sm text-gray-500 mt-1">
@@ -228,25 +237,25 @@ export function Contact() {
               </Card>
 
               {/* Email card */}
-              <Card className="rounded-xl overflow-hidden transition hover:shadow-md hover:-translate-y-0.5">
+              <Card className="rounded-xl overflow-hidden transition hover:shadow-md hover:-translate-y-0.5 bg-slate-900/60 border border-white/10 text-slate-100">
                 <a
                   href="mailto:roshanskariah@legacylifeagency.net"
                   aria-label="Email Legacy Life Agency"
-                  className="block focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  className="block focus:outline-none focus:ring-2 focus:ring-amber-400/60"
                 >
-                  <CardContent className="pt-6 transition cursor-pointer hover:bg-amber-50">
+                  <CardContent className="pt-6 transition cursor-pointer hover:bg-white/5">
                     <div className="flex items-start space-x-4">
-                      <div className="bg-amber-100 p-3 rounded-lg">
-                        <Mail className="h-6 w-6 text-amber-700" />
+                      <div className="bg-amber-500/15 p-3 rounded-lg border border-amber-400/20">
+                        <Mail className="h-6 w-6 text-amber-300" />
                       </div>
 
                       <div>
-                        <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                        <p className="text-gray-600 text-sm sm:text-base wrap-break-words">
+                        <h3 className="font-bold text-slate-100 mb-1">Email</h3>
+                        <p className="text-slate-300 text-sm sm:text-base wrap-break-words">
                           roshanskariah@legacylifeagency.net
                         </p>
-                        <p className="text-sm text-gray-500 mt-1">
-                          We'll respond within 24 hours
+                        <p className="text-sm text-slate-400 mt-1">
+                          We'll respond shortly
                         </p>
                       </div>
                     </div>
@@ -255,27 +264,26 @@ export function Contact() {
               </Card>
 
               {/* Appointment box */}
-              {/* Appointment box */}
-              <div className="bg-slate-900 text-white p-8 rounded-lg">
-                <h3 className="text-2xl font-bold mb-2">
+              <div className="bg-slate-900/70 border border-white/10 text-white p-8 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold mb-2 text-slate-100">
                   Request an Appointment
                 </h3>
-                <p className="text-white/80 mb-6">
+                <p className="text-slate-300 mb-6">
                   Submit your preferences and we'll follow up to confirm a time.
                 </p>
 
                 {state.succeeded && lastSubmitted === "appointment" && (
-                    <div className="mb-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-900"
+                    <div className="mb-4 rounded-lg border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 text-emerald-200"
                     >
                         <p className="font-semibold">Appointment request sent!</p>
-                        <p className="text-sm">Thanks! We'll reach out to confirm a time.</p>
+                        <p className="text-sm text-emerald-200/90">Thanks! We'll reach out to confirm a time.</p>
                     </div>
                 )}
 
                 <Button
                   type="button"
                   variant="outline"
-                  className="w-full border-amber-600 text-amber-600 bg-white hover:bg-amber-600 hover:text-white"
+                  className="w-full border-amber-400/60 text-amber-200 bg-transparent hover:bg-amber-400 hover:text-slate-900"
                   onClick={() => {
                     setShowAppt((v) => !v);
                     setSubmissionType("appointment");
@@ -285,10 +293,10 @@ export function Contact() {
                 </Button>
 
                 {showAppt && (
-                  <div className="mt-6 space-y-4 rounded-lg bg-white p-4 text-slate-900">
+                  <div className="mt-6 space-y-4 rounded-lg bg-slate-950/60 border border-white/10 p-4 text-slate-100">
                     {/* 1) Best way to reach you */}
                     <div>
-                      <label className="block text-sm font-medium mb-2">
+                      <label className="block text-sm font-medium mb-2 text-slate-200">
                         Best way to reach you
                       </label>
 
@@ -301,8 +309,8 @@ export function Contact() {
                             className={[
                               "px-3 py-2 rounded-lg border text-sm capitalize transition",
                               reachMethod === value
-                                ? "border-slate-900 bg-slate-900 text-white"
-                                : "border-slate-200 bg-white text-slate-800 hover:bg-slate-50",
+                                ? "border-amber-400/60 bg-amber-400 text-slate-900"
+                                : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10",
                             ].join(" ")}
                           >
                             {value}
@@ -319,8 +327,8 @@ export function Contact() {
 
                     {/* Phone block */}
                     {shouldShowPhone && (
-                      <div className="rounded-xl border bg-slate-50 p-4">
-                        <p className="text-sm font-semibold mb-3">
+                      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                        <p className="text-sm font-semibold mb-3 text-slate-100">
                           Phone details
                         </p>
 
@@ -333,8 +341,8 @@ export function Contact() {
                               className={[
                                 "px-3 py-2 rounded-lg border text-sm capitalize transition",
                                 phonePreference === value
-                                  ? "border-slate-900 bg-white text-slate-900"
-                                  : "border-slate-200 bg-white text-slate-700 hover:bg-slate-100",
+                                  ? "border-amber-400/60 bg-amber-400/15 text-amber-200"
+                                  : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10",
                               ].join(" ")}
                             >
                               {value}
@@ -348,7 +356,7 @@ export function Contact() {
                           value={phonePreference}
                         />
 
-                        <label className="block text-sm text-slate-700 mb-2">
+                        <label className="block text-sm text-slate-200 mb-2">
                           Phone number
                         </label>
                         <Input
@@ -357,18 +365,19 @@ export function Contact() {
                           required={
                             submissionType === "appointment" && shouldShowPhone
                           }
+                          className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                         />
                       </div>
                     )}
 
                     {/* Email block */}
                     {shouldShowEmail && (
-                      <div className="rounded-xl border bg-slate-50 p-4">
-                        <p className="text-sm font-semibold mb-3">
+                      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                        <p className="text-sm font-semibold mb-3 text-slate-100">
                           Email details
                         </p>
 
-                        <label className="block text-sm text-slate-700 mb-2">
+                        <label className="block text-sm text-slate-200 mb-2">
                           Email address
                         </label>
                         <Input
@@ -378,13 +387,14 @@ export function Contact() {
                           required={
                             submissionType === "appointment" && shouldShowEmail
                           }
+                          className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                         />
                       </div>
                     )}
 
                     {/* Name */}
                     <div>
-                        <label className="block text-sm font-medium mb-2">
+                        <label className="block text-sm font-medium mb-2 text-slate-200">
                           Name
                         </label>
                         <Input 
@@ -393,12 +403,13 @@ export function Contact() {
                         placeholder="John Smith" 
                         autoComplete="name"
                         required={submissionType === "appointment"}
+                        className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                         />
                     </div>
 
                     {/* Reason */}
                     <div>
-                      <label className="block text-sm font-medium mb-2">
+                      <label className="block text-sm font-medium mb-2 text-slate-200">
                         Reason for appointment (select all that apply)
                       </label>
 
@@ -410,12 +421,12 @@ export function Contact() {
                         ].map((reason) => (
                             <label 
                             key={reason.value} 
-                            className="flex items-center gap-2 text-sm"
+                            className="flex items-center gap-2 text-sm text-slate-200"
                             >
                                 <input 
                                 type="checkbox" 
                                 name="appointment_reason[]"
-                                className="h-4 w-4"
+                                className="h-4 w-4 accent-amber-400"
                                 value={reason.value}
                                 checked={selectedReasons.includes(reason.value)}
                                 onChange={() => toggleReason(reason.value)}
@@ -437,34 +448,34 @@ export function Contact() {
 
                     {/* Best days */}
                     <div>
-                      <p className="block text-sm font-medium mb-2">
+                      <p className="block text-sm font-medium mb-2 text-slate-200">
                         Best days
                       </p>
                       <div className="flex flex-col gap-2">
-                        <label className="inline-flex items-center gap-2 text-sm text-slate-700">
+                        <label className="inline-flex items-center gap-2 text-sm text-slate-200">
                           <input
                             type="checkbox"
                             name="best_days"
                             value="weekdays"
-                            className="h-4 w-4"
+                            className="h-4 w-4 accent-amber-400"
                           />
                           Weekdays
                         </label>
-                        <label className="inline-flex items-center gap-2 text-sm text-slate-700">
+                        <label className="inline-flex items-center gap-2 text-sm text-slate-200">
                           <input
                             type="checkbox"
                             name="best_days"
                             value="weekends"
-                            className="h-4 w-4"
+                            className="h-4 w-4 accent-amber-400"
                           />
                           Weekends
                         </label>
-                        <label className="inline-flex items-center gap-2 text-sm text-slate-700">
+                        <label className="inline-flex items-center gap-2 text-sm text-slate-200">
                           <input
                             type="checkbox"
                             name="best_days"
                             value="anytime"
-                            className="h-4 w-4"
+                            className="h-4 w-4 accent-amber-400"
                           />
                           Anytime
                         </label>
@@ -473,21 +484,21 @@ export function Contact() {
 
                     {/* Time window */}
                     <div>
-                      <label className="block text-sm font-medium mb-2">
+                      <label className="block text-sm font-medium mb-2 text-slate-200">
                         Time window
                       </label>
                       <select
                         name="time_window"
-                        className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm"
+                        className="w-full rounded-lg border border-white/10 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-amber-400/40 focus:border-amber-400/40"
                         required={submissionType === "appointment"}
                         defaultValue=""
                       >
-                        <option value="" disabled>
+                        <option value="" disabled className="bg-slate-950">
                           Select a time window...
                         </option>
-                        <option value="morning">Morning</option>
-                        <option value="afternoon">Afternoon</option>
-                        <option value="evening">Evening</option>
+                        <option value="morning" className="bg-slate-950">Morning</option>
+                        <option value="afternoon" className="bg-slate-950">Afternoon</option>
+                        <option value="evening" className="bg-slate-950">Evening</option>
                       </select>
                     </div>
 
@@ -499,7 +510,7 @@ export function Contact() {
                       <Textarea
                         name="additional_info"
                         placeholder="Tell us anything helpful (goals, questions, timeline, etc.)"
-                        className="min-h-25"
+                        className="min-h-25 bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible::border-amber-400/40"
                       />
                     </div>
 
@@ -510,7 +521,7 @@ export function Contact() {
                         setLastSubmitted("appointment");
                     }}
                       disabled={state.submitting}
-                      className="w-full text-white  bg-amber-800 hover:bg-amber-600 disabled:opacity-60"
+                      className="w-full text-slate-900  bg-amber-400 hover:bg-amber-300 disabled:opacity-60"
                     >
                       {/* {state.submitting ? "Sending..." : "Submit Inquiry"} */}
                       Submit Appointment Request

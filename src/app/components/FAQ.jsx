@@ -51,8 +51,8 @@ const faqs = [
 export function FAQ() {
     return (
         // <section id="faq" className="py-20 bg-white">
-        <section id="faq" className="py-15 bg-linear-to-br from-slate-900 via-slate-800 to-[#1c1405] relative overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(201,162,77,0.15),transparent_40%)]"></div>
+        <section id="faq" className="py-20 bg-[#0f172a] relative overflow-hidden">
+            {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(201,162,77,0.15),transparent_40%)]"></div> */}
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
