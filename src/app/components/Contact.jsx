@@ -309,7 +309,7 @@ export function Contact() {
                             className={[
                               "px-3 py-2 rounded-lg border text-sm capitalize transition",
                               reachMethod === value
-                                ? "border-amber-400/60 bg-amber-400 text-slate-900"
+                                ? "border-amber-400/60 bg-gold text-white"
                                 : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10",
                             ].join(" ")}
                           >
@@ -341,7 +341,7 @@ export function Contact() {
                               className={[
                                 "px-3 py-2 rounded-lg border text-sm capitalize transition",
                                 phonePreference === value
-                                  ? "border-amber-400/60 bg-amber-400/15 text-amber-200"
+                                  ? "border-amber-400/60 bg-gold text-white"
                                   : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10",
                               ].join(" ")}
                             >
@@ -426,7 +426,7 @@ export function Contact() {
                                 <input 
                                 type="checkbox" 
                                 name="appointment_reason[]"
-                                className="h-4 w-4 accent-amber-400"
+                                className="h-4 w-4 accent-gold"
                                 value={reason.value}
                                 checked={selectedReasons.includes(reason.value)}
                                 onChange={() => toggleReason(reason.value)}
@@ -457,7 +457,7 @@ export function Contact() {
                             type="checkbox"
                             name="best_days"
                             value="weekdays"
-                            className="h-4 w-4 accent-amber-400"
+                            className="h-4 w-4 accent-gold"
                           />
                           Weekdays
                         </label>
@@ -466,7 +466,7 @@ export function Contact() {
                             type="checkbox"
                             name="best_days"
                             value="weekends"
-                            className="h-4 w-4 accent-amber-400"
+                            className="h-4 w-4 accent-gold"
                           />
                           Weekends
                         </label>
@@ -475,7 +475,7 @@ export function Contact() {
                             type="checkbox"
                             name="best_days"
                             value="anytime"
-                            className="h-4 w-4 accent-amber-400"
+                            className="h-4 w-4 accent-gold"
                           />
                           Anytime
                         </label>
@@ -521,7 +521,7 @@ export function Contact() {
                         setLastSubmitted("appointment");
                     }}
                       disabled={state.submitting}
-                      className="w-full text-slate-900  bg-amber-400 hover:bg-amber-300 disabled:opacity-60"
+                      className="w-full text-white  bg-gold hover:bg-[#A38332] disabled:opacity-60"
                     >
                       {/* {state.submitting ? "Sending..." : "Submit Inquiry"} */}
                       Submit Appointment Request
