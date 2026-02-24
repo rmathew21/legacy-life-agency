@@ -85,7 +85,7 @@ export function FAQ() {
                     <p className="text-slate-300 mb-4">Still have questions?</p>
                     <a 
                         href="#contact"
-                        className="text-gold hover:text-[#A38332] font-semibold underline"
+                        className="text-[#A38332] hover:text-gold font-semibold underline"
                     >
                         Contact us for personalized answers
                     </a>

@@ -59,7 +59,7 @@ export function Nav() {
                             </a>
                         ))}
                         <a href="#contact">
-                            <Button className="bg-gold hover:bg-[#A38332] text-white">
+                            <Button className="bg-[#A38332] hover:bg-gold text-white">
                                 Get Started
                             </Button>
                         </a>

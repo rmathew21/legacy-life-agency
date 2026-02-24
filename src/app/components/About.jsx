@@ -72,7 +72,7 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-6">
             {values.map((value) => (
                 <div key={value.title} className="p-6 bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl  hover:bg-white/10 transition">
-                    <value.icon className="h-10 w-10 text-gold mb-4" />
+                    <value.icon className="h-10 w-10 text-[#A38332] mb-4" />
                     <h3 className="font-bold text-white mb-2">{value.title}</h3>
                     <p className="text-sm text-slate-300">{value.description}</p>
                 </div>

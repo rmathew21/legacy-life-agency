@@ -102,7 +102,7 @@ export function Contact() {
                       </label>
                       <Input
                         name="firstName"
-                        placeholder="John"
+                        // placeholder="John"
                         required={submissionType === "inquiry"}
                         className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                       />
@@ -113,7 +113,7 @@ export function Contact() {
                       </label>
                       <Input
                         name="lastName"
-                        placeholder="Smith"
+                        // placeholder="Smith"
                         required={submissionType === "inquiry"}
                         className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                       />
@@ -127,7 +127,7 @@ export function Contact() {
                     <Input
                       name="email"
                       type="email"
-                      placeholder="john.smith@example.com"
+                      // placeholder="john.smith@example.com"
                       required={submissionType === "inquiry"}
                       className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                     />
@@ -145,7 +145,7 @@ export function Contact() {
                     <Input
                       name="phone"
                       type="tel"
-                      placeholder="(555) 555-5555"
+                      // placeholder="(555) 555-5555"
                       className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
                     />
                   </div>
@@ -198,7 +198,7 @@ export function Contact() {
                       setShowAppt(false);
                     }}
                     disabled={state.submitting}
-                    className="w-full text-white bg-gold hover:bg-[#A38332] disabled:opacity-60"
+                    className="w-full text-white bg-[#A38332] hover:bg-gold disabled:opacity-60"
                   >
                     {state.submitting ? "Sending..." : "Submit Inquiry"}
                   </Button>
@@ -219,7 +219,7 @@ export function Contact() {
                   <CardContent className="pt-6 transition cursor-pointer hover:bg-white/5">
                     <div className="flex items-start space-x-4">
                       <div className="bg-gold/15 p-3 rounded-lg border border-amber-400/20">
-                        <Phone className="h-6 w-6 text-gold" />
+                        <Phone className="h-6 w-6 text-[#A38332]" />
                       </div>
 
                       <div>
@@ -246,7 +246,7 @@ export function Contact() {
                   <CardContent className="pt-6 transition cursor-pointer hover:bg-white/5">
                     <div className="flex items-start space-x-4">
                       <div className="bg-gold/15 p-3 rounded-lg border border-amber-400/20">
-                        <Mail className="h-6 w-6 text-gold" />
+                        <Mail className="h-6 w-6 text-[#A38332]" />
                       </div>
 
                       <div>
@@ -283,7 +283,7 @@ export function Contact() {
                 <Button
                   type="button"
                   variant="outline"
-                  className="w-full border-gold text-gold bg-transparent hover:bg-[#A38332] hover:text-slate-900"
+                  className="w-full border-[#A38332] text-[#A38332] bg-transparent hover:bg-gold hover:text-white"
                   onClick={() => {
                     setShowAppt((v) => !v);
                     setSubmissionType("appointment");
@@ -309,7 +309,7 @@ export function Contact() {
                             className={[
                               "px-3 py-2 rounded-lg border text-sm capitalize transition",
                               reachMethod === value
-                                ? "border-amber-400/60 bg-gold text-white"
+                                ? "border-amber-400/60 bg-[#A38332] text-white"
                                 : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10",
                             ].join(" ")}
                           >
@@ -341,7 +341,7 @@ export function Contact() {
                               className={[
                                 "px-3 py-2 rounded-lg border text-sm capitalize transition",
                                 phonePreference === value
-                                  ? "border-amber-400/60 bg-gold text-white"
+                                  ? "border-amber-400/60 bg-[#A38332] text-white"
                                   : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10",
                               ].join(" ")}
                             >
@@ -426,7 +426,7 @@ export function Contact() {
                                 <input 
                                 type="checkbox" 
                                 name="appointment_reason[]"
-                                className="h-4 w-4 accent-gold"
+                                className="h-4 w-4 accent-[#A38332]"
                                 value={reason.value}
                                 checked={selectedReasons.includes(reason.value)}
                                 onChange={() => toggleReason(reason.value)}
@@ -457,7 +457,7 @@ export function Contact() {
                             type="checkbox"
                             name="best_days"
                             value="weekdays"
-                            className="h-4 w-4 accent-gold"
+                            className="h-4 w-4 accent-[#A38332]"
                           />
                           Weekdays
                         </label>
@@ -466,7 +466,7 @@ export function Contact() {
                             type="checkbox"
                             name="best_days"
                             value="weekends"
-                            className="h-4 w-4 accent-gold"
+                            className="h-4 w-4 accent-[#A38332]"
                           />
                           Weekends
                         </label>
@@ -475,7 +475,7 @@ export function Contact() {
                             type="checkbox"
                             name="best_days"
                             value="anytime"
-                            className="h-4 w-4 accent-gold"
+                            className="h-4 w-4 accent-[#A38332}"
                           />
                           Anytime
                         </label>
@@ -521,7 +521,7 @@ export function Contact() {
                         setLastSubmitted("appointment");
                     }}
                       disabled={state.submitting}
-                      className="w-full text-white  bg-gold hover:bg-[#A38332] disabled:opacity-60"
+                      className="w-full text-white  bg-[#A38332] hover:bg-gold disabled:opacity-60"
                     >
                       {/* {state.submitting ? "Sending..." : "Submit Inquiry"} */}
                       Submit Appointment Request
