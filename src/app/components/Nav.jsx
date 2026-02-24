@@ -5,7 +5,7 @@ import logoGold from "@/assets/torchGold2.svg"
 
 export function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    // const [isScrolled, setIsScrolled] = useState(false);
+
 
     const navigation = [
         { name: "About", href: "#about" },
@@ -14,26 +14,16 @@ export function Nav() {
         { name: "Contact", href: "#contact" }
     ];
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         setIsScrolled(window.scrollY > 20);
-    //     };
-
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => window.removeEventListener("scroll", handleScroll);
-    // }, []);
+   
 
     return (
-        // <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        
          <header className="fixed top-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur border-b border-white/10"> 
-          {/* <header className={`fixed top-0 w-full z-50 transition-all bg-[#0f172a]/80 backdrop-blur border-b border-white/10 ${isScrolled ? "shadow-lg shadow-black/20" : ""}`}>   */}
-          {/* <header className="fixed top-0 w-full z-50 bg-[#1e293b]/90 backdrop-blur border-b border-white/10">   */}
+
         
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
-                    {/* <div className="flex items-center">
-                        <h1 className="text-2xl font-bold text-slate-900">Legacy Life Agency</h1>
-                    </div> */}
+                    
                     <div className="flex items-center gap-3">
                         <a href="/" className="flex items-center gap-3">
                             <img 

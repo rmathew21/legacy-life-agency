@@ -55,7 +55,7 @@ export function Footer() {
                   About Us
                 </Link>
               </li>
-              {/* <li><a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">Our Team</a></li> */}
+           
               <li>
                 <Link
                   to="/#contact"
@@ -64,7 +64,7 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
-              {/* <li><a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">Careers</a></li> */}
+              
             </ul>
           </div>
 
@@ -99,23 +99,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* <div>
-                        <h4 className="font-bold mb-4">Connect With Us</h4>
-                        <div className="flex space-x-4">
-                            <a href="https://www.facebook.com/" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors">
-                                <Facebook className="h-6 w-6" />
-                            </a>
-                            <a href="https://x.com/" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors">
-                                <X className="h-6 w-6" />
-                            </a>
-                            <a href="https://www.linkedin.com/" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors">
-                                <Linkedin className="h-6 w-6" />
-                            </a>
-                            <a href="https://www.instagram.com/" target="_blank" className="text-gray-400 hover:text-amber-400 transition-colors">
-                                <Instagram className="h-6 w-6" />
-                            </a>
-                        </div>
-                    </div> */}
+         
         </div>
 
         <div className="border-t border-gray-800 pt-8">
@@ -133,12 +117,7 @@ export function Footer() {
                 Powered by Robo Web Solutions
               </a>
             
-            {/* <div className="flex space-x-6 mt-4 md:mt-0"> */}
-            {/* <div className="flex flex-wrap gap-x-6 gap-y-2 mt-4 md:mt-0 text-sm">
-                           <Link to="/privacy" className="hover:text-amber-400 transition-colors">Privacy Policy</Link>
-                           <Link to="/terms" className="hover:text-amber-400 transition-colors">Terms of Service</Link>
-                           <Link to="/disclaimer" className="hover:text-amber-400 transition-colors">Disclaimers</Link>
-                        </div> */}
+   
           </div>
         </div>
       </div>

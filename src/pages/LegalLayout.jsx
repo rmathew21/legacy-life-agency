@@ -2,16 +2,16 @@ import { Link } from "react-router-dom";
 
 export default function LegalLayout({ title, children }) {
   return (
-    <div className="min-h-screen bg-white">
-      <header className="border-b border-slate-200 bg-slate-50">
+    <div className="min-h-screen bg-[white]">
+      <header className="border-b border-slate-200 bg-[#0f172a]">
         <div className="max-w-4xl mx-auto px-6 py-24">
           <Link
             to="/"
-            className="inline-block mb-6 text-sm underline text-slate-600 hover:text-slate-900"
+            className="inline-block mb-6 text-sm underline text-slate-300 hover:text-slate-900"
           >
             Back to Home
           </Link>
-          <h1 className="text-center text-3xl md:text-4xl font-bold mt-3">
+          <h1 className="text-center text-white text-3xl md:text-4xl font-bold mt-3">
             {title}
           </h1>
         </div>
