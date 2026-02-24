@@ -8,10 +8,10 @@ export function Nav() {
 
 
     const navigation = [
-        { name: "About", href: "#about" },
-        { name: "Services", href: "#services" },
-        { name: "FAQ", href: "#faq" },
-        { name: "Contact", href: "#contact" }
+        { name: "About", href: "/#about" },
+        { name: "Services", href: "/#services" },
+        { name: "FAQ", href: "/#faq" },
+        { name: "Contact", href: "/#contact" }
     ];
 
    
