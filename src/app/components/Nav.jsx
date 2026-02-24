@@ -14,7 +14,10 @@ export function Nav() {
     ];
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        // <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+        <header className="fixed top-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur border-b border-white/10">
+         {/* <header className="fixed top-0 w-full z-50 bg-[#1e293b] backdrop-blur border-b border-white/10"> */}
+        
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     {/* <div className="flex items-center">
@@ -39,7 +42,7 @@ export function Nav() {
                             <a 
                                 key={item.name}
                                 href={item.href}
-                                className="text-gray-700 hover:text-amber-700 transition-colors"
+                                className="text-slate-300 hover:text-amber-700 transition-colors"
                             >
                                 {item.name}
                             </a>
@@ -58,9 +61,9 @@ export function Nav() {
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         {isMenuOpen ? (
-                            <X className="h-6 w-6 text-gray-700" />
+                            <X className="h-6 w-6 text-slate-300" />
                         ) : (
-                            <Menu className="h-6 w-6 text-gray-700" />
+                            <Menu className="h-6 w-6 text-slate-300" />
                         )}
                     </button>
                 </div>
@@ -73,7 +76,7 @@ export function Nav() {
                                 <a 
                                 key={item.name}
                                 href={item.href}
-                                className="text-gray-700 hover:text-amber-700 transition-colors"
+                                className="text-slate-300 hover:text-amber-700 transition-colors"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {item.name}
