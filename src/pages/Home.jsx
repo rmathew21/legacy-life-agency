@@ -1,6 +1,7 @@
 // import { Nav } from "../app/components/Nav";
 import { Hero } from "../app/components/Hero";
 import { About } from "../app/components/About";
+import { AboutLight } from "../app/components/AboutLight";
 import { Services } from "../app/components/Services";
 import { FAQ } from "../app/components/FAQ";
 import { Contact } from "../app/components/Contact";

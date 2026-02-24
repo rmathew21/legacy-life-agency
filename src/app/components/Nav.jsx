@@ -1,10 +1,11 @@
 import { Button } from "@/app/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logoGold from "@/assets/torchGold2.svg"
 
 export function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // const [isScrolled, setIsScrolled] = useState(false);
 
     const navigation = [
         { name: "About", href: "#about" },
@@ -13,10 +14,20 @@ export function Nav() {
         { name: "Contact", href: "#contact" }
     ];
 
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setIsScrolled(window.scrollY > 20);
+    //     };
+
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // }, []);
+
     return (
         // <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-        <header className="fixed top-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur border-b border-white/10">
-         {/* <header className="fixed top-0 w-full z-50 bg-[#1e293b] backdrop-blur border-b border-white/10"> */}
+         <header className="fixed top-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur border-b border-white/10"> 
+          {/* <header className={`fixed top-0 w-full z-50 transition-all bg-[#0f172a]/80 backdrop-blur border-b border-white/10 ${isScrolled ? "shadow-lg shadow-black/20" : ""}`}>   */}
+          {/* <header className="fixed top-0 w-full z-50 bg-[#1e293b]/90 backdrop-blur border-b border-white/10">   */}
         
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
@@ -42,13 +53,13 @@ export function Nav() {
                             <a 
                                 key={item.name}
                                 href={item.href}
-                                className="text-slate-300 hover:text-amber-700 transition-colors"
+                                className="text-slate-300 hover:text-gold transition-colors"
                             >
                                 {item.name}
                             </a>
                         ))}
                         <a href="#contact">
-                            <Button className="bg-amber-600 hover:bg-amber-700">
+                            <Button className="bg-gold hover:bg-[#A38332] text-white">
                                 Get Started
                             </Button>
                         </a>

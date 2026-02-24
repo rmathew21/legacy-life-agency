@@ -198,7 +198,7 @@ export function Contact() {
                       setShowAppt(false);
                     }}
                     disabled={state.submitting}
-                    className="w-full text-slate-900 bg-amber-400 hover:bg-amber-300 disabled:opacity-60"
+                    className="w-full text-white bg-gold hover:bg-[#A38332] disabled:opacity-60"
                   >
                     {state.submitting ? "Sending..." : "Submit Inquiry"}
                   </Button>
@@ -218,8 +218,8 @@ export function Contact() {
                 >
                   <CardContent className="pt-6 transition cursor-pointer hover:bg-white/5">
                     <div className="flex items-start space-x-4">
-                      <div className="bg-amber-500/15 p-3 rounded-lg border border-amber-400/20">
-                        <Phone className="h-6 w-6 text-amber-300" />
+                      <div className="bg-gold/15 p-3 rounded-lg border border-amber-400/20">
+                        <Phone className="h-6 w-6 text-gold" />
                       </div>
 
                       <div>
@@ -245,8 +245,8 @@ export function Contact() {
                 >
                   <CardContent className="pt-6 transition cursor-pointer hover:bg-white/5">
                     <div className="flex items-start space-x-4">
-                      <div className="bg-amber-500/15 p-3 rounded-lg border border-amber-400/20">
-                        <Mail className="h-6 w-6 text-amber-300" />
+                      <div className="bg-gold/15 p-3 rounded-lg border border-amber-400/20">
+                        <Mail className="h-6 w-6 text-gold" />
                       </div>
 
                       <div>
@@ -283,7 +283,7 @@ export function Contact() {
                 <Button
                   type="button"
                   variant="outline"
-                  className="w-full border-amber-400/60 text-amber-200 bg-transparent hover:bg-amber-400 hover:text-slate-900"
+                  className="w-full border-gold text-gold bg-transparent hover:bg-[#A38332] hover:text-slate-900"
                   onClick={() => {
                     setShowAppt((v) => !v);
                     setSubmissionType("appointment");

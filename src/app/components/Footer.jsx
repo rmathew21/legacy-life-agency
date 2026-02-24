@@ -20,7 +20,7 @@ export function Footer() {
               <li>
                 <a
                   href="/#services"
-                  className="text-gray-400 hover:text-amber-400 transition-colors"
+                  className="text-gray-400 hover:text-gold transition-colors"
                 >
                   Life Insurance
                 </a>
@@ -28,7 +28,7 @@ export function Footer() {
               <li>
                 <a
                   href="/#services"
-                  className="text-gray-400 hover:text-amber-400 transition-colors"
+                  className="text-gray-400 hover:text-gold transition-colors"
                 >
                   Financial Planning
                 </a>
@@ -36,7 +36,7 @@ export function Footer() {
               <li>
                 <a
                   href="/#services"
-                  className="text-gray-400 hover:text-amber-400 transition-colors"
+                  className="text-gray-400 hover:text-gold transition-colors"
                 >
                   Retirement Planning
                 </a>
@@ -50,7 +50,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/#about"
-                  className="text-gray-400 hover:text-amber-400 transition-colors"
+                  className="text-gray-400 hover:text-gold transition-colors"
                 >
                   About Us
                 </Link>
@@ -59,7 +59,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/#contact"
-                  className="text-gray-400 hover:text-amber-400 transition-colors"
+                  className="text-gray-400 hover:text-gold transition-colors"
                 >
                   Contact
                 </Link>
@@ -75,7 +75,7 @@ export function Footer() {
                 {" "}
                 <Link
                   to="/privacy"
-                  className="text-gray-400 hover:text-amber-400 transition-colors"
+                  className="text-gray-400 hover:text-gold transition-colors"
                 >
                   Privacy Policy
                 </Link>
@@ -83,7 +83,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/terms"
-                  className="text-gray-400 hover:text-amber-400 transition-colors"
+                  className="text-gray-400 hover:text-gold transition-colors"
                 >
                   Terms of Service
                 </Link>
@@ -91,7 +91,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/disclaimer"
-                  className="text-gray-400 hover:text-amber-400 transition-colors"
+                  className="text-gray-400 hover:text-gold transition-colors"
                 >
                   Disclaimers
                 </Link>
@@ -128,7 +128,7 @@ export function Footer() {
                 href="https://www.robinmathew.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-amber-400 transition-colors"
+                className="text-gray-400 hover:text-gold transition-colors"
               >
                 Powered by Robo Web Solutions
               </a>

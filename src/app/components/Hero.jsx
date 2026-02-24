@@ -19,13 +19,13 @@ export function Hero() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="#contact">
-                        <Button size="lg" className="bg-amber-600 text-white hover:bg-amber-700 px-8 py-6 text-lg">
+                        <Button size="lg" className="bg-[#A38332] text-white hover:bg-gold px-8 py-6 text-lg">
                             Get Started
                             <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
                     </a>
                     <a href="#about">
-                        <Button size="lg" variant="outline" className="border-2 border-amber-600 text-amber-600 bg-transparent hover:bg-amber-600 hover:text-white px-8 py-6 text-lg">
+                        <Button size="lg" variant="outline" className="border-2 border-[#A38332] text-[#A38332] bg-transparent hover:bg-gold hover:text-white px-8 py-6 text-lg">
                             Learn More
                         </Button>
                     </a>

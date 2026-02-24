@@ -67,7 +67,7 @@ export function Services() {
                                 />
                                 <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
                                 <div className="absolute bottom-4 left-4">
-                                    <div className="bg-amber-600 rounded-full p-3 shadow-lg">
+                                    <div className="bg-gold rounded-full p-3 shadow-lg">
                                         <service.icon className="h-8 w-8 text-white" />
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@ export function Services() {
                                 <ul className="space-y-2">
                                     {service.features.map((feature) => (
                                         <li key={feature} className="flex items-start">
-                                            <span className="text-amber-600 mr-2">✓</span>
+                                            <span className="text-gold mr-2">✓</span>
                                             <span className="text-gray-300">{feature}</span>
                                         </li>
                                     ))}
