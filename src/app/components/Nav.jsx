@@ -77,13 +77,13 @@ export function Nav() {
                                 <a 
                                 key={item.name}
                                 href={item.href}
-                                className="text-slate-300 hover:text-amber-700 transition-colors"
+                                className="text-slate-300 hover:text-gold transition-colors"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {item.name}
                                 </a>
                             ))}
-                            <Button asChild className="bg-amber-600 hover:bg-amber-700 w-full">
+                            <Button asChild className="bg-[#A38332] hover:bg-gold w-full">
                                 <a href="#contact" onClick={() => setIsMenuOpen(false)}>
                                     Get Started
                                 </a>
