@@ -361,7 +361,7 @@ export function Contact() {
                         </label>
                         <Input
                           name="appointment_phone"
-                          placeholder="(555) 123-4567"
+                          // placeholder="(555) 123-4567"
                           required={
                             submissionType === "appointment" && shouldShowPhone
                           }
@@ -373,17 +373,17 @@ export function Contact() {
                     {/* Email block */}
                     {shouldShowEmail && (
                       <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                        <p className="text-sm font-semibold mb-3 text-slate-100">
+                        {/* <p className="text-sm font-semibold mb-3 text-slate-100">
                           Email details
-                        </p>
+                        </p> */}
 
                         <label className="block text-sm text-slate-200 mb-2">
-                          Email address
+                          Email 
                         </label>
                         <Input
                           type="email"
                           name="appointment_email"
-                          placeholder="you@example.com"
+                          // placeholder="you@example.com"
                           required={
                             submissionType === "appointment" && shouldShowEmail
                           }
@@ -400,7 +400,7 @@ export function Contact() {
                         <Input 
                         name="name"
                         type="text"
-                        placeholder="John Smith" 
+                        // placeholder="John Smith" 
                         autoComplete="name"
                         required={submissionType === "appointment"}
                         className="bg-slate-950/60 text-slate-100 placeholder:text-slate-400 border-white/10 focus-visible:ring-amber-400/40 focus-visible:border-amber-400/40"
@@ -415,7 +415,7 @@ export function Contact() {
 
                       <div className="space-y-2">
                         {[
-                            { label: "Life planning", value: "life_planning" },
+                            { label: "Life Insurance", value: "life_insurance" },
                             { label: "Asset Management", value: "asset_management" },
                             { label: "Retirement", value: "retirement" },
                         ].map((reason) => (
