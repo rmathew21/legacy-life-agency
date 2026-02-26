@@ -282,8 +282,8 @@ export function Contact() {
 
                 <Button
                   type="button"
-                  variant="outline"
-                  className="w-full border-[#A38332] text-[#A38332] bg-transparent hover:bg-gold hover:text-white"
+                  // variant="outline"
+                  className="w-full text-white bg-[#A38332] hover:bg-gold disabled:opacity-60"
                   onClick={() => {
                     setShowAppt((v) => !v);
                     setSubmissionType("appointment");
