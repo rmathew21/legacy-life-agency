@@ -4,6 +4,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/app/components/ui/accordion";
+import { Button } from "./ui/button";
 
 const faqs = [
     {
@@ -83,12 +84,19 @@ export function FAQ() {
 
                 <div className="mt-12 text-center">
                     <p className="text-slate-300 mb-4">Still have questions?</p>
-                    <a 
-                        href="#contact"
-                        className="text-[#A38332] hover:text-gold font-semibold underline"
+
+                    <Button
+                        asChild
+                        className="mt-4 bg-[#A38332] hover:bg-gold text-[white] font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-lg transition-all"
                     >
-                        Contact us for personalized answers
-                    </a>
+                        <a 
+                        href="#contact"
+                        className="text-[#A38332] font-semibold "
+                    >
+                        Schedule a Free Consultation
+                        </a>
+                    </Button>
+                
                 </div>
             </div>
         </section>

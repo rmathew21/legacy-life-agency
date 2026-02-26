@@ -78,7 +78,7 @@ export function Contact() {
             <div>
               <Card className="mb-8 bg-white/5 border border-white/10 text-slate-100 shadow-lg">
                 <CardHeader>
-                  <CardTitle>Send us a Message</CardTitle>
+                  <CardTitle>Send us a Message:</CardTitle>
                 </CardHeader>
 
                 <CardContent className="space-y-4">
@@ -266,7 +266,7 @@ export function Contact() {
               {/* Appointment box */}
               <div className="bg-slate-900/70 border border-white/10 text-white p-8 rounded-lg shadow-lg">
                 <h3 className="text-2xl font-bold mb-2 text-slate-100">
-                  Request an Appointment
+                  Schedule a Free Consultation
                 </h3>
                 <p className="text-slate-300 mb-6">
                   Submit your preferences and we'll follow up to confirm a time.
@@ -275,7 +275,7 @@ export function Contact() {
                 {state.succeeded && lastSubmitted === "appointment" && (
                     <div className="mb-4 rounded-lg border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 text-emerald-200"
                     >
-                        <p className="font-semibold">Appointment request sent!</p>
+                        <p className="font-semibold">Consultation request sent!</p>
                         <p className="text-sm text-emerald-200/90">Thanks! We'll reach out to confirm a time.</p>
                     </div>
                 )}
@@ -289,7 +289,7 @@ export function Contact() {
                     setSubmissionType("appointment");
                   }}
                 >
-                  {showAppt ? "Hide Request Form" : "Request An Appointment"}
+                  {showAppt ? "Hide Request Form" : "Schedule Consultation"}
                 </Button>
 
                 {showAppt && (
@@ -524,7 +524,7 @@ export function Contact() {
                       className="w-full text-white  bg-[#A38332] hover:bg-gold disabled:opacity-60"
                     >
                       {/* {state.submitting ? "Sending..." : "Submit Inquiry"} */}
-                      Submit Appointment Request
+                      Submit Consultation Request
                     </Button>
                   </div>
                 )}
