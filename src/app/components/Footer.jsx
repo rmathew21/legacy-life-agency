@@ -103,11 +103,14 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-start text-sm text-gray-400 gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-end text-sm text-gray-400 gap-4">
            
            <div className="text-center md:text-left space-y-1">
             <p>
               NPN License # 21414259
+            </p>
+            <p>
+              License Number: 3271960 
             </p>
             <p>
               &copy; 2026 Legacy Life Agency.{" "}All Rights reserved.
