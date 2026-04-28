@@ -110,7 +110,7 @@ export function Footer() {
               NPN License # 21414259
             </p>
             <p>
-              License Number: 3271960 
+              License Number # 3271960 
             </p>
             <p>
               &copy; 2026 Legacy Life Agency.{" "}All Rights reserved.
