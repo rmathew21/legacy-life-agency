@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import { Layout } from "./app/components/Layout";
 import { ScrollToTop } from "./app/components/ScrollToTop";
 import ScrollToHash from "./app/components/ScrollToHash";
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/disclaimer" element={<Disclaimer />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
