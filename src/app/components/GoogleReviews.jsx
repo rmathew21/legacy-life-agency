@@ -150,10 +150,10 @@ export default function GoogleReviews() {
         )}
  
         {/* Attribution / link back to Google */}
-        {status === 'ready' && data?.googleMapsUri && (
+        {status === 'ready' && data?.writeReviewUri && (
           <div className="mt-12 text-center">
             <a
-              href={data.googleMapsUri}
+              href={data.writeReviewUri}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-[#A38332] px-6 py-3 font-semibold text-white shadow-md transition-all hover:bg-[#b8923a] hover:shadow-lg"

@@ -73,8 +73,6 @@ export default async function handler(req, res) {
         .json({ error: 'Server is missing Google Places configuration.' });
     }
    
-    // Place Details (New): field-mask paths start directly with the field name.
-    // `reviews` is a Pro-tier (billable) field, so we keep the list tight.
     const fieldMask = ['rating', 'userRatingCount', 'googleMapsUri', 'reviews'].join(',');
    
     const url = `https://places.googleapis.com/v1/places/${PLACE_ID}`;
@@ -84,7 +82,6 @@ export default async function handler(req, res) {
         headers: {
           'X-Goog-Api-Key': API_KEY,
           'X-Goog-FieldMask': fieldMask,
-          // Localizes review text + the relative time strings ("2 months ago").
           'Accept-Language': 'en-US',
         },
       });
@@ -97,13 +94,12 @@ export default async function handler(req, res) {
    
       const data = await googleRes.json();
    
-      // Reshape into a lean payload so the client only gets what it renders.
       const payload = {
         rating: data.rating ?? null,
         userRatingCount: data.userRatingCount ?? 0,
         googleMapsUri: data.googleMapsUri ?? null,
+        writeReviewUri: `https://search.google.com/local/writereview?placeid=${PLACE_ID}`,
         reviews: (data.reviews ?? []).map((r) => ({
-          // `name` is the review's unique resource id — good React key.
           id: r.name,
           rating: r.rating ?? 0,
           text: r.text?.text ?? r.originalText?.text ?? '',
@@ -114,13 +110,12 @@ export default async function handler(req, res) {
             uri: r.authorAttribution?.uri ?? null, // link to reviewer's profile
             photoUri: r.authorAttribution?.photoUri ?? null,
           },
-          reviewUri: r.googleMapsUri ?? null, // link to this review on Maps
+          reviewUri: r.googleMapsUri ?? null, 
         })),
       };
    
-      // Edge caching keeps Places API calls (and billing) low: a single fetch
-      // serves all visitors for a day, then revalidates in the background.
-      // Google permits caching these fields for up to 30 days.
+      
+      // caching every 24 hours
       res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate=604800');
       return res.status(200).json(payload);
     } catch (err) {
